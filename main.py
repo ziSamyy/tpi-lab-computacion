@@ -180,3 +180,16 @@ def concrete_type_menu():
                 print('❌Ingrese una opcion valida')
                 print('')
                 continue
+
+def main():
+    
+    peso_sacos = {'cemento':0.022727272727272728, 'grava': 0.01764705882352941, 'arena':0.019230769230769232, 'agua': 0.02}
+    clientinfo = client_info() # ('DNI', 'Nombre', 'Apellido', 'Telefono') ✅
+    terrainmenu = terrain_menu() # ('Sistema', 'Longitud', 'Ancho', 'Espesor', 'volumen') ✅
+    convertido = convertidor(terrainmenu[0], terrainmenu[1], terrainmenu[2], terrainmenu[3]) #✅
+    concretetpye = concrete_type_menu() # ('Materiales', 'Tipo') ✅
+    cantbolsas = cant_bolsas(concretetpye[0], peso_sacos) # ('Cemento', 'Arena', 'Grava', 'Agua') ✅
+    volmat = volumen_materiales(terrainmenu[4], concretetpye[0]) # ('Cemento', 'Arena', 'Grava', 'Agua') ✅
+    cantsacos = cant_sacos(cantbolsas, peso_sacos) # ('Cemento', 'Arena', 'Grava', 'Agua') ✅
+    ticketfile(clientinfo, terrainmenu, concretetpye, cantbolsas, volmat, cantsacos) # ✅
+    clientagenda(clientinfo) # ✅
