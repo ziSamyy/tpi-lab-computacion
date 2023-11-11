@@ -193,3 +193,58 @@ def main():
     cantsacos = cant_sacos(cantbolsas, peso_sacos) # ('Cemento', 'Arena', 'Grava', 'Agua') ✅
     ticketfile(clientinfo, terrainmenu, concretetpye, cantbolsas, volmat, cantsacos) # ✅
     clientagenda(clientinfo) # ✅
+        
+    
+    
+    print('')
+    print('Informacion del cliente')
+    print('')
+    print(f'DNI: {clientinfo[0]}')
+    print(f'Nombre: {clientinfo[1]}')
+    print(f'Apellido: {clientinfo[2]}')
+    print(f'Telefono: {clientinfo[3]}')
+    print('')
+    print('Informacion del terreno')
+    print('')
+    print(f'Sistema: {terrainmenu[0]}')
+    print(f'Longitud: {terrainmenu[1]}')
+    print(f'Ancho: {terrainmenu[2]}')
+    print(f'Espesor: {terrainmenu[3]}')
+    print(f'Volumen: {terrainmenu[4]}')
+    print('')
+    print('Informacion del concreto')
+    print('')
+    print(f'Tipo: {concretetpye[1]}')
+    print(f'Cemento: {concretetpye[0][0]}')
+    print(f'Arena: {concretetpye[0][1]}')
+    print(f'Grava: {concretetpye[0][2]}')
+    print(f'Agua: {concretetpye[0][3]}')
+    print('')
+    print('Informacion de los materiales')
+    print('')
+    print(f'Cemento: {cantbolsas[0]}')
+    print(f'Arena: {cantbolsas[1]}')
+    print(f'Grava: {cantbolsas[2]}')
+    print(f'Agua: {cantbolsas[3]}')
+    print('')
+    print('Informacion de los volumenes')
+    print('')
+    print(f'Cemento: {volmat[0]}')
+    print(f'Arena: {volmat[1]}')
+    print(f'Grava: {volmat[2]}')
+    print(f'Agua: {volmat[3]}')
+    print('')
+    print('Informacion de los sacos')
+    print('')
+    print(f'Cemento: {cantsacos[0]}')
+    print(f'Arena: {cantsacos[1]}')
+    print(f'Grava: {cantsacos[2]}')
+    print(f'Agua: {cantsacos[3]}')
+    print('')
+
+while True:
+    main()
+    os.system('cls')
+    continuar = input('¿Desea ingresar otros datos? (si/no): ')
+    if continuar.lower() != 'si':
+        break
