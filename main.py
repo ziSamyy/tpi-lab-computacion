@@ -244,6 +244,7 @@ def main():
 
 while True:
     main()
+    input('Presione enter para continuar...')
     os.system('cls')
     continuar = input('¿Desea ingresar otros datos? (si/no): ')
     if continuar.lower() != 'si':
